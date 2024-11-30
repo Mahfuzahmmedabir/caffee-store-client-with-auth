@@ -3,11 +3,25 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
-    const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/addCoffee">Add Coffee</NavLink></li>
-        
-    </>
+    const links = (
+      <>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/addCoffee">Add Coffee</NavLink>
+        </li>
+        <li>
+          <NavLink to="/singin">Singin</NavLink>
+        </li>
+        <li>
+          <NavLink to="/singup">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/user">User</NavLink>
+        </li>
+      </>
+    );
 
     return (
         <div className="navbar bg-base-100">

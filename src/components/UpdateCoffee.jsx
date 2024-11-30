@@ -22,27 +22,27 @@ const UpdateCoffee = () => {
         console.log(newCoffee)
 
         // send data to the server and database
-        fetch(`http://localhost:5000/coffee/${_id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newCoffee)
+        fetch(`http://localhost:5000/caffee/${_id}`, {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(newCoffee),
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount) {
-                    console.log('successfully updated');
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Coffee updated successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Ok'
-                    });
-                    e.target.reset();
-                }
-            })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data.modifiedCount) {
+              console.log('successfully updated');
+              Swal.fire({
+                title: 'Success!',
+                text: 'Coffee updated successfully',
+                icon: 'success',
+                confirmButtonText: 'Ok',
+              });
+              e.target.reset();
+            }
+          });
 
     }
 

@@ -5,6 +5,7 @@ import Coffee from './Coffee';
 const Home = () => {
 
     const coffees = useLoaderData();
+    console.log(coffees)
 
     // better use tanstack query or similar packages
     const [loadedCoffees, setLoadedCoffees] = useState(coffees);
